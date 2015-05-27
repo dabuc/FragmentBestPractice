@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="horizontal"
+              tools:context=".MainActivity">
+
+    <fragment
+        android:id="@+id/news_title_fragment"
+        android:name="com.example.kaite.fragmentbestpractice.NewsTitleFragment"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        tools:layout="@layout/fragment_new_title"></fragment>
+
+    <FrameLayout
+        android:id="@+id/new_content_layout"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3">
+
+        <fragment
+            android:id="@+id/news_content_frag_for_large"
+            android:name="com.example.kaite.fragmentbestpractice.NewContentFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout="@layout/fragment_news_content"></fragment>
+    </FrameLayout>
+
+</LinearLayout>
